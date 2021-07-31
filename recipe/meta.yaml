@@ -1,17 +1,17 @@
 {% set name = "vpython" %}
-{% set version = "7.6.1" %}
+{% set version = "7.6.2" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 46fd11affc1b996554d7c6d0567fbd845ee5ead559ab9fd4db963eabe6b3da3e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: cd5d2365eda9fa91ed5dd07e1eef8876b328e264601ba05b16f33a25b9365770
 
 build:
-  number: 3
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<36]
 
 requirements:
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE.txt
-  summary: "VPython: 3D visualization made easy"
+  summary: 'VPython: 3D visualization made easy'
   description: |
     VPython makes it is to create and manipulate objects in three
     dimensions. For example, create a sphere with `my_sphere = vp.sphere()`
