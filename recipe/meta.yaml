@@ -1,5 +1,5 @@
 {% set name = "vpython" %}
-{% set version = "7.6.2" %}
+{% set version = "7.6.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: cd5d2365eda9fa91ed5dd07e1eef8876b328e264601ba05b16f33a25b9365770
+  sha256: 732ec3a1a57a55efd2eb1b27e4f2eaa5fe061f081b215a820418eca811e51e40
 
 build:
   number: 0
