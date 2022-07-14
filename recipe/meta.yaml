@@ -35,10 +35,6 @@ requirements:
 test:
   imports:
     - vpython
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: https://vpython.org/
