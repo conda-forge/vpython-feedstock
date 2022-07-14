@@ -25,7 +25,7 @@ requirements:
     - python
     - cython
   run:
-    - autobahn >=18.8.2
+    - autobahn >=22.6.1,<27
     - ipykernel
     - jupyter
     - jupyter-server-proxy
@@ -35,6 +35,10 @@ requirements:
 test:
   imports:
     - vpython
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://vpython.org/
