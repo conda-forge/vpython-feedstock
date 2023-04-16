@@ -27,6 +27,7 @@ requirements:
     - setuptools_scm
   run:
     - autobahn >=22.6.1,<27
+    - nbconvert >7
     - ipykernel
     - jupyter
     - jupyter-server-proxy
