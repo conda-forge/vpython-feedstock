@@ -13,6 +13,7 @@ build:
   number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<37]
+  skip: true  # [py>310 and ppc64le]
 
 requirements:
   build:
@@ -27,7 +28,6 @@ requirements:
     - setuptools_scm
   run:
     - autobahn >=22.6.1,<27
-    - nbconvert >6.5
     - ipykernel
     - jupyter
     - jupyter-server-proxy
