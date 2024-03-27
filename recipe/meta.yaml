@@ -1,5 +1,5 @@
 {% set name = "vpython" %}
-{% set version = "7.6.4" %}
+{% set version = "7.6.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 162ed54db313e5f87f9704b13942d3a0c7ad2da88b287d3baeb46e0eba7ffccc
+  sha256: 26d0fe4c4f253c36a570ade3924cee2423b2feb5e6082ff5d5f2eac093e746df
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<37]
   skip: true  # [py>310 and ppc64le]
@@ -29,8 +29,8 @@ requirements:
   run:
     - autobahn >=22.6.1,<27
     - ipykernel
-    - jupyter
     - jupyter-server-proxy
+    - jupyterlab-vpython >=3.1.8
     - numpy
     - python
 
