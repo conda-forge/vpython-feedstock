@@ -29,7 +29,6 @@ requirements:
   run:
     - autobahn >=22.6.1,<27
     - ipykernel
-    - jupyterlab >=4,<5
     - jupyter-server-proxy
     - jupyterlab-vpython >=3.1.8
     - numpy
